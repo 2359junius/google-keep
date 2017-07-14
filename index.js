@@ -30,6 +30,9 @@ server.register(require('hapi-auth-jwt2'), function(err) {
     server.route({
         method: 'POST',
         path: '/api/users',
+        config: {
+            cors: true
+        },
         handler: function(request, reply) {
             const insertOperation = Knex('user')
             .insert({
@@ -51,6 +54,9 @@ server.register(require('hapi-auth-jwt2'), function(err) {
     server.route({
         method: 'POST',
         path: '/api/auth',
+        config: {
+            cors: true
+        },
         handler: function(request, reply) {
             const getOperation = Knex('user')
             .where({
@@ -97,7 +103,8 @@ server.register(require('hapi-auth-jwt2'), function(err) {
         config: {
             auth: {
                 strategy: 'jwt-auth'
-            }
+            },
+            cors: true
         },
         handler: function(request, reply) {
             const id = request.auth.credentials.id
@@ -121,7 +128,8 @@ server.register(require('hapi-auth-jwt2'), function(err) {
         config: {
             auth: {
                 strategy: 'jwt-auth'
-            }
+            },
+            cors: true
         },
         handler: function(request, reply) {
             const id = request.auth.credentials.id
@@ -149,7 +157,8 @@ server.register(require('hapi-auth-jwt2'), function(err) {
         config: {
             auth: {
                 strategy: 'jwt-auth'
-            }
+            },
+            cors: true
         },
         handler: function(request, reply) {
             const id = request.auth.credentials.id
@@ -180,7 +189,8 @@ server.register(require('hapi-auth-jwt2'), function(err) {
         config: {
             auth: {
                 strategy: 'jwt-auth'
-            }
+            },
+            cors: true
         },
         handler: function(request, reply) {
             const id = request.auth.credentials.id
