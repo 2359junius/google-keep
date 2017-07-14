@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
       noteTable.string('title', 250).notNullable()
       noteTable.string('description', 2000)
       
-      noteTable.timestamps(true, true)
+      
   })
 };
 
