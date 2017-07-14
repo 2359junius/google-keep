@@ -9,5 +9,11 @@ module.exports = {
         seeds: {tableName: './seeds'},
         client: config.db.client,
         connection: config.db.connection
+    },
+    production: {
+        migrations: {tableName: 'knex_migrations'},
+        seeds: {tableName: './seeds'},
+        client: config.db.client,
+        connection: config.db.connection
     }
 }
