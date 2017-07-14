@@ -1,3 +1,4 @@
+console.log('yo oooooo')
 module.exports = {
     db: {
         client: 'mysql',
