@@ -29,7 +29,7 @@ server.register(require('hapi-auth-jwt2'), function(err) {
     
     server.route({
         method: 'POST',
-        path: '/api/user',
+        path: '/api/users',
         handler: function(request, reply) {
             const insertOperation = Knex('user')
             .insert({
@@ -93,7 +93,7 @@ server.register(require('hapi-auth-jwt2'), function(err) {
     
     server.route({
         method: 'GET',
-        path: '/api/note',
+        path: '/api/notes',
         config: {
             auth: {
                 strategy: 'jwt-auth'
@@ -117,7 +117,7 @@ server.register(require('hapi-auth-jwt2'), function(err) {
     
     server.route({
         method: 'POST',
-        path: '/api/note',
+        path: '/api/notes',
         config: {
             auth: {
                 strategy: 'jwt-auth'
@@ -145,7 +145,7 @@ server.register(require('hapi-auth-jwt2'), function(err) {
     
     server.route({
         method: 'PATCH',
-        path: '/api/note/{noteId}',
+        path: '/api/notes/{noteId}',
         config: {
             auth: {
                 strategy: 'jwt-auth'
@@ -176,7 +176,7 @@ server.register(require('hapi-auth-jwt2'), function(err) {
     
     server.route({
         method: 'DELETE',
-        path: '/api/note/{noteId}',
+        path: '/api/notes/{noteId}',
         config: {
             auth: {
                 strategy: 'jwt-auth'
