@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 
 const server = new Hapi.Server()
 
-server.connection({ port: 8888 })
+server.connection({ port: process.env.PORT || 8888 })
 
 server.register(require('hapi-auth-jwt2'), function(err) {
     if (err) {

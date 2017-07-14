@@ -8,7 +8,7 @@ exports.up = function(knex, Promise) {
         userTable.string('email', 250).notNullable().unique()
         userTable.string('password', 128).notNullable()
         
-        
+        userTable.timestamps(true, true)
     })
 };
 
