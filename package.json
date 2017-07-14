@@ -9,7 +9,7 @@
     "start": "node index.js",
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
-    "postinstall": "npm run migrate && npm run seed"
+    "postinstall": "npm run migrate"
   },
   "author": "",
   "license": "ISC",
