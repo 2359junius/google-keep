@@ -1,6 +1,6 @@
 // This file is different from src/knex.js. 
 // It is being used by the cli and its main purpose is to run migrations & seeds
-var config = require('./config')
+var config = require('./configs/config')
 
 module.exports = {
     development: {
